@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35431.28
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zeal.Bootcamp.DnD.Api", "Zeal.Bootcamp.DnD.Api\Zeal.Bootcamp.DnD.Api.csproj", "{577D2432-0D2F-4DCB-AFD3-5B75D06412F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{07939019-53B1-4233-A49F-5D44A5862E43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zeal.Bootcamp.DnD.Domain", "Zeal.Bootcamp.DnD.Domain\Zeal.Bootcamp.DnD.Domain.csproj", "{5F1C32E7-F9B8-4F94-97D9-A664C6605218}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zeal.Bootcamp.DnD.Data", "Zeal.Bootcamp.DnD.Data\Zeal.Bootcamp.DnD.Data.csproj", "{69BADB81-19D4-47CC-955C-B2EAB6667091}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zeal.Bootcamp.DnD.Application", "Zeal.Bootcamp.DnD.Application\Zeal.Bootcamp.DnD.Application.csproj", "{A7D80287-A468-4B98-BDC5-D6D4DF2E9B13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{F133DA7B-2D36-4A2D-9A1A-022C4D884929}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{577D2432-0D2F-4DCB-AFD3-5B75D06412F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{577D2432-0D2F-4DCB-AFD3-5B75D06412F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{577D2432-0D2F-4DCB-AFD3-5B75D06412F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{577D2432-0D2F-4DCB-AFD3-5B75D06412F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F1C32E7-F9B8-4F94-97D9-A664C6605218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F1C32E7-F9B8-4F94-97D9-A664C6605218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F1C32E7-F9B8-4F94-97D9-A664C6605218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F1C32E7-F9B8-4F94-97D9-A664C6605218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69BADB81-19D4-47CC-955C-B2EAB6667091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69BADB81-19D4-47CC-955C-B2EAB6667091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69BADB81-19D4-47CC-955C-B2EAB6667091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69BADB81-19D4-47CC-955C-B2EAB6667091}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7D80287-A468-4B98-BDC5-D6D4DF2E9B13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7D80287-A468-4B98-BDC5-D6D4DF2E9B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7D80287-A468-4B98-BDC5-D6D4DF2E9B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7D80287-A468-4B98-BDC5-D6D4DF2E9B13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{577D2432-0D2F-4DCB-AFD3-5B75D06412F3} = {07939019-53B1-4233-A49F-5D44A5862E43}
+		{5F1C32E7-F9B8-4F94-97D9-A664C6605218} = {07939019-53B1-4233-A49F-5D44A5862E43}
+		{69BADB81-19D4-47CC-955C-B2EAB6667091} = {07939019-53B1-4233-A49F-5D44A5862E43}
+		{A7D80287-A468-4B98-BDC5-D6D4DF2E9B13} = {07939019-53B1-4233-A49F-5D44A5862E43}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2630CA8D-0EF3-4387-9EEA-6B495B407462}
+	EndGlobalSection
+EndGlobal

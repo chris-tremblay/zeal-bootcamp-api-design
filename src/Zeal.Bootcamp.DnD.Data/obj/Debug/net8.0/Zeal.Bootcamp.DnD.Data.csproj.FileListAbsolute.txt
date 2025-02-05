@@ -1,0 +1,17 @@
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Data\bin\Debug\net8.0\Zeal.Bootcamp.DnD.Data.deps.json
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Data\bin\Debug\net8.0\Zeal.Bootcamp.DnD.Data.runtimeconfig.json
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Data\bin\Debug\net8.0\Zeal.Bootcamp.DnD.Data.dll
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Data\bin\Debug\net8.0\Zeal.Bootcamp.DnD.Data.pdb
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Data\bin\Debug\net8.0\Zeal.Bootcamp.DnD.Domain.dll
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Data\bin\Debug\net8.0\Zeal.Bootcamp.DnD.Domain.pdb
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Data\obj\Debug\net8.0\Zeal.Bootcamp.DnD.Data.csproj.AssemblyReference.cache
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Data\obj\Debug\net8.0\Zeal.Bootcamp.DnD.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Data\obj\Debug\net8.0\Zeal.Bootcamp.DnD.Data.AssemblyInfoInputs.cache
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Data\obj\Debug\net8.0\Zeal.Bootcamp.DnD.Data.AssemblyInfo.cs
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Data\obj\Debug\net8.0\Zeal.Bootcamp.DnD.Data.csproj.CoreCompileInputs.cache
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Data\obj\Debug\net8.0\Zeal.Boo.A1E75F99.Up2Date
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Data\obj\Debug\net8.0\Zeal.Bootcamp.DnD.Data.dll
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Data\obj\Debug\net8.0\refint\Zeal.Bootcamp.DnD.Data.dll
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Data\obj\Debug\net8.0\Zeal.Bootcamp.DnD.Data.pdb
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Data\obj\Debug\net8.0\Zeal.Bootcamp.DnD.Data.genruntimeconfig.cache
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Data\obj\Debug\net8.0\ref\Zeal.Bootcamp.DnD.Data.dll

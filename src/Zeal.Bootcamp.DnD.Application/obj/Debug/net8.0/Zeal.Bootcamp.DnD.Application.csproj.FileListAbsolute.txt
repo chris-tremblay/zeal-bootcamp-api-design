@@ -1,0 +1,11 @@
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Application\bin\Debug\net8.0\Zeal.Bootcamp.DnD.Application.deps.json
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Application\bin\Debug\net8.0\Zeal.Bootcamp.DnD.Application.dll
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Application\bin\Debug\net8.0\Zeal.Bootcamp.DnD.Application.pdb
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Application\obj\Debug\net8.0\Zeal.Bootcamp.DnD.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Application\obj\Debug\net8.0\Zeal.Bootcamp.DnD.Application.AssemblyInfoInputs.cache
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Application\obj\Debug\net8.0\Zeal.Bootcamp.DnD.Application.AssemblyInfo.cs
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Application\obj\Debug\net8.0\Zeal.Bootcamp.DnD.Application.csproj.CoreCompileInputs.cache
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Application\obj\Debug\net8.0\Zeal.Bootcamp.DnD.Application.dll
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Application\obj\Debug\net8.0\refint\Zeal.Bootcamp.DnD.Application.dll
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Application\obj\Debug\net8.0\Zeal.Bootcamp.DnD.Application.pdb
+D:\Work\Zeal\Bootcamps\Building an API\Zeal.Bootcamp.DnD.Api\src\Zeal.Bootcamp.DnD.Application\obj\Debug\net8.0\ref\Zeal.Bootcamp.DnD.Application.dll
