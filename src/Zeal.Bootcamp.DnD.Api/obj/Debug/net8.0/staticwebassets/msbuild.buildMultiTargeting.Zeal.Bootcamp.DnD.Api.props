@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Zeal.Bootcamp.DnD.Api.props" />
-</Project>

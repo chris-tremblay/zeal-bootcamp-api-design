@@ -22,5 +22,5 @@ public class Weapon
     public string Name { get; private set; }
 
     public int RollDamage()
-        => Math.Max(0, BaseDamage.Roll() - Modifier);
+        => Math.Max(0, BaseDamage.Roll() + Modifier);
 }
