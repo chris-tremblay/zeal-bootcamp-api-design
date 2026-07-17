@@ -1,23 +1,30 @@
-﻿namespace Zeal.Bootcamp.DnD.Domain.Dice;
+using Zeal.Bootcamp.DnD.Domain.Core;
 
-public class Die
+namespace Zeal.Bootcamp.DnD.Domain.Dice;
+
+/// <summary>A die is a value object: two dice with the same number of sides are equivalent.</summary>
+public sealed class Die(DieType type) : ValueObject<Die>
 {
-    public static Die D10 = new Die(10);
-    public static Die D100 = new Die(100);
-    public static Die D12 = new Die(12);
-    public static Die D20 = new Die(20);
-    public static Die D4 = new Die(4);
-    public static Die D6 = new Die(6);
-    public static Die D8 = new Die(8);
-    private static Random random = new Random();
+    public static readonly Die D4 = new(DieType.D4);
+    public static readonly Die D6 = new(DieType.D6);
+    public static readonly Die D8 = new(DieType.D8);
+    public static readonly Die D10 = new(DieType.D10);
+    public static readonly Die D12 = new(DieType.D12);
+    public static readonly Die D20 = new(DieType.D20);
+    public static readonly Die D100 = new(DieType.D100);
 
-    internal Die(int numberOfSides)
+    public DieType Type { get; } = type;
+    public int NumberOfSides => Type.Value;
+    public int Roll() => Random.Shared.Next(1, NumberOfSides + 1);
+
+    public IReadOnlyCollection<int> Roll(int numberOfDice)
     {
-        NumberOfSides = numberOfSides;
+        if (numberOfDice < 1)
+            throw new DomainException("At least one die must be rolled.");
+
+        return Enumerable.Range(0, numberOfDice).Select(_ => Roll()).ToArray();
     }
 
-    public int NumberOfSides { get; private set; }
-
-    public int Roll()
-        => random.Next(1, NumberOfSides + 1);
+    protected override bool EqualsCore(Die other) => Type == other.Type;
+    protected override int GetHashCodeCore() => Type.GetHashCode();
 }
