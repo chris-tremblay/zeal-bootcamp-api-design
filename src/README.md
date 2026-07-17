@@ -42,7 +42,7 @@ Week 4: Implement OData (CQRS Intro)
 
 1. Install nuget package:
 ```cmd
-dotnet add package Microsoft.AspNetCore.OData.NewtonsoftJson
+dotnet add package Microsoft.AspNetCore.OData
 ```
 
 2. Create Data\Queries folder in your Application project.
@@ -67,7 +67,7 @@ services.AddOData(opt =>
         .AddRouteComponents("odata", ODataConfiguration.GetEdmModel())
         .EnableQueryFeatures(100);
     opt.TimeZone = TimeZoneInfo.Utc;
-}).AddODataNewtonsoftJson()
+})
 ```
 
 Week 5:

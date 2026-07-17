@@ -13,6 +13,8 @@ public static class ServiceCollectionExtensions
         IConfiguration configuration)
     {
         services
+            .AddMediatR(configuration =>
+                configuration.RegisterServicesFromAssemblyContaining<AssemblyMarker>())
             .AddScoped<IDomainEventsStorage, DomainEventsStorage>()
             .AddScoped<IDomainEventDispatcher, DomainEventDispatcher>()
             .AddScoped<IUnitOfWork, UnitOfWork>();

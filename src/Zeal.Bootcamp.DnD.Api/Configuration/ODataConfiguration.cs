@@ -2,7 +2,7 @@
 using Microsoft.OData.ModelBuilder;
 using Zeal.Bootcamp.DnD.Application.Data.Queries.ListCharacters;
 
-namespace Zeal.Bootcamp.DnD.Api.COnfiguration;
+namespace Zeal.Bootcamp.DnD.Api.Configuration;
 
 // Week 4
 public static class ODataConfiguration
@@ -11,9 +11,9 @@ public static class ODataConfiguration
     {
         var builder = new ODataConventionModelBuilder();
 
-        EntitySetConfiguration<ListCharactersDataQueryResult> formDetailSet = builder.EntitySet<ListCharactersDataQueryResult>("forms");
-        formDetailSet.EntityType.HasKey(r => r.Id);
-       
+        EntitySetConfiguration<ListCharactersDataQueryResult> characters =
+            builder.EntitySet<ListCharactersDataQueryResult>("characters");
+        characters.EntityType.HasKey(character => character.Id);
 
         return builder.GetEdmModel();
     }
