@@ -1,12 +1,15 @@
 using MediatR;
 using Zeal.Bootcamp.DnD.Application.Data.Repositories;
+using Zeal.Bootcamp.DnD.Application.Services.Catalogs;
 using Zeal.Bootcamp.DnD.Domain.Characters;
-using Zeal.Bootcamp.DnD.Domain.Extensions;
 using Zeal.Bootcamp.DnD.Domain.Weapons;
 
 namespace Zeal.Bootcamp.DnD.Application.Commands.CreateCharacter;
 
-internal sealed class CreateCharacterCommandHandler(ICharacterRepository characterRepository)
+internal sealed class CreateCharacterCommandHandler(
+    ICharacterRepository characterRepository,
+    IClassCatalog classCatalog,
+    IWeaponCatalog weaponCatalog)
     : IRequestHandler<CreateCharacterCommand, Guid>
 {
     public async Task<Guid> Handle(
@@ -15,8 +18,8 @@ internal sealed class CreateCharacterCommandHandler(ICharacterRepository charact
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        Class characterClass = typeof(Class).GetStaticField<Class>(request.ClassName);
-        Weapon weapon = typeof(Weapon).GetStaticField<Weapon>(request.Weapon);
+        Class characterClass = classCatalog.Find(request.ClassName);
+        Weapon weapon = weaponCatalog.Find(request.Weapon);
         Character character = Character.Create(
             request.Name,
             characterClass,

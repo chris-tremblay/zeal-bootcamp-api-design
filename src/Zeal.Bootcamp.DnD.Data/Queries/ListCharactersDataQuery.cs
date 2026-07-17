@@ -11,6 +11,7 @@ internal class ListCharactersDataQuery(DnDContext db) : IListCharactersDataQuery
         => db.Set<CharacterEntity>().AsNoTracking().Select(i => new ListCharactersDataQueryResult
         {
             ClassName = i.Class,
+            Id = i.CharacterId,
             Name = i.Name,
             WeaponName = i.EquippedWeaponItem == null ? "Hands" : i.EquippedWeaponItem.Name,
         });
