@@ -17,7 +17,46 @@ internal sealed class DnDContext(DbContextOptions<DnDContext> options)
 
     public void Migrate() => Database.Migrate();
 
-    async Task IDataStore.SaveChanges() => await SaveChangesAsync();
+    async Task IDataStore.SaveChanges()
+    {
+        var newCharactersWithEquippedWeapons = ChangeTracker
+            .Entries<CharacterEntity>()
+            .Where(entry => entry.State == EntityState.Added && entry.Entity.EquippedWeaponItemId.HasValue)
+            .Select(entry => new
+            {
+                Character = entry.Entity,
+                EquippedWeapon = entry.Entity.EquippedWeaponItem,
+                EquippedWeaponItemId = entry.Entity.EquippedWeaponItemId,
+            })
+            .ToList();
+
+        if (newCharactersWithEquippedWeapons.Count == 0)
+        {
+            await SaveChangesAsync();
+            return;
+        }
+
+        // A new character depends on its inventory, the equipped item depends on that
+        // inventory, and the character in turn references the equipped item. Persist the
+        // optional final link separately so the database has a valid insert order.
+        foreach (var item in newCharactersWithEquippedWeapons)
+        {
+            item.Character.EquippedWeaponItem = null;
+            item.Character.EquippedWeaponItemId = null;
+        }
+
+        await using var transaction = await Database.BeginTransactionAsync();
+        await SaveChangesAsync();
+
+        foreach (var item in newCharactersWithEquippedWeapons)
+        {
+            item.Character.EquippedWeaponItem = item.EquippedWeapon;
+            item.Character.EquippedWeaponItemId = item.EquippedWeaponItemId;
+        }
+
+        await SaveChangesAsync();
+        await transaction.CommitAsync();
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -73,7 +73,7 @@ public sealed class Character : AggregateRoot<Guid>
         foreach (Weapon weapon in startingWeapons ?? [])
             character.AddWeapon(weapon);
 
-        character.AddDomainEvent(new CharacterCreated(character));
+        character.AddDomainEvent(new CharacterCreatedDomainEvent(character));
         return character;
     }
 
@@ -94,7 +94,7 @@ public sealed class Character : AggregateRoot<Guid>
     {
         int oldLevel = Level;
         _experience.Add(points);
-        AddDomainEvent(new ExperienceAwarded(this, points, oldLevel, Level));
+        AddDomainEvent(new ExperienceAwardedDomainEvent(this, points, oldLevel, Level));
     }
 
     public int CalculateAttackDamage() => Weapon.RollDamage();

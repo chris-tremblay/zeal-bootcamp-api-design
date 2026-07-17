@@ -2,7 +2,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Zeal.Bootcamp.DnD.Application.Data;
 using Zeal.Bootcamp.DnD.Application.Data.Queries.ListCharacters;
+using Zeal.Bootcamp.DnD.Application.Data.Repositories;
 using Zeal.Bootcamp.DnD.Data.Queries;
+using Zeal.Bootcamp.DnD.Data.Repository;
 
 namespace Zeal.Bootcamp.DnD.Data.Extensions;
 
@@ -17,6 +19,7 @@ public static class ServiceCollectionExtensions
         return services
             .AddScoped<IDatabase, DnDContext>()
             .AddScoped<IDataStore>(provider => provider.GetRequiredService<DnDContext>())
+            .AddScoped<ICharacterRepository, CharacterRepository>()
             .AddScoped<IListCharactersDataQuery, ListCharactersDataQuery>();
     }
 }

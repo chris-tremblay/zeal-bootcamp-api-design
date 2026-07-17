@@ -18,7 +18,7 @@ dotnet add package Microsoft.EntityFrameworkCore.Tools
 
 3. Create Entities and Models in the data project
 
-4. Add EF and SQL Lite support for Program.cs
+4. Add EF and SQL Server support for Program.cs
 
 5. Run commands to migrate database In the database project folder
 

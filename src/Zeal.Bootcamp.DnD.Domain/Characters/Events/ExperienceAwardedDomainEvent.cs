@@ -2,7 +2,7 @@ using Zeal.Bootcamp.DnD.Domain.Core;
 
 namespace Zeal.Bootcamp.DnD.Domain.Characters.Events;
 
-public sealed class ExperienceAwarded(
+public sealed class ExperienceAwardedDomainEvent(
     Character source,
     int points,
     int previousLevel,

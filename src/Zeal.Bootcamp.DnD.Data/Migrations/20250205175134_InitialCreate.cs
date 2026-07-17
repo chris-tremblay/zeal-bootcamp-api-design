@@ -15,10 +15,10 @@ namespace Zeal.Bootcamp.DnD.Data.Migrations
                 name: "Character",
                 columns: table => new
                 {
-                    CharacterId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    Class = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
-                    Name = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
-                    Weapon = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false)
+                    CharacterId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Class = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Weapon = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
                 },
                 constraints: table =>
                 {

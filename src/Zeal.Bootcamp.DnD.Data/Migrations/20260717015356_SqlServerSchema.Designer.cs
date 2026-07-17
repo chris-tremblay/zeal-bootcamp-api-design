@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Zeal.Bootcamp.DnD.Data;
 
@@ -11,9 +12,11 @@ using Zeal.Bootcamp.DnD.Data;
 namespace Zeal.Bootcamp.DnD.Data.Migrations
 {
     [DbContext(typeof(DnDContext))]
-    partial class DnDContextModelSnapshot : ModelSnapshot
+    [Migration("20260717015356_SqlServerSchema")]
+    partial class SqlServerSchema
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

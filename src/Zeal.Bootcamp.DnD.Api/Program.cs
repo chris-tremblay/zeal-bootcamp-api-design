@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.OData;
+using Microsoft.EntityFrameworkCore;
 using Zeal.Bootcamp.DnD.Api.Configuration;
 using Zeal.Bootcamp.DnD.Application;
+using Zeal.Bootcamp.DnD.Data;
 using Zeal.Bootcamp.DnD.Data.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,11 +26,18 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddApplicationServices(builder.Configuration);
+builder.Services.AddMediatrBehaviors();
 
 // Week 3: AddDataServices to add support for the data layer
-builder.Services.AddDataServices();
+builder.Services.AddDataServices(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DnDDatabase")));
 
 var app = builder.Build();
+
+using (IServiceScope scope = app.Services.CreateScope())
+{
+    scope.ServiceProvider.GetRequiredService<IDatabase>().Migrate();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
