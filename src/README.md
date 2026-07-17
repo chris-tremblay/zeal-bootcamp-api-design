@@ -11,7 +11,7 @@ Homework:
 2. Install nuget packages in the data project
 
 ```cmd
-dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet add package Microsoft.EntityFrameworkCore.Relational
 dotnet add package Microsoft.EntityFrameworkCore.Design
 dotnet add package Microsoft.EntityFrameworkCore.Tools
 ```

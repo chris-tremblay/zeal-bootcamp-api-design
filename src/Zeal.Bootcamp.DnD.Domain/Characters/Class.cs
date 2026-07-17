@@ -8,17 +8,16 @@ namespace Zeal.Bootcamp.DnD.Domain.Characters;
 public sealed class Class : Enumeration<Class, string>
 {
     public static readonly Class Barbarian = new("Barbarian", Die.D12,
-        [WeaponCategory.SimpleMelee, WeaponCategory.SimpleRanged, WeaponCategory.MartialMelee, WeaponCategory.MartialRanged]);
+        [WeaponProficiency.Simple, WeaponProficiency.Martial]);
     public static readonly Class Fighter = new("Fighter", Die.D10,
-        [WeaponCategory.SimpleMelee, WeaponCategory.SimpleRanged, WeaponCategory.MartialMelee, WeaponCategory.MartialRanged]);
-    public static readonly Class Mage = new("Mage", Die.D6, [WeaponCategory.SimpleMelee]);
-    public static readonly Class Thief = new("Thief", Die.D8,
-        [WeaponCategory.SimpleMelee, WeaponCategory.SimpleRanged]);
-    public static readonly Class Wizard = new("Wizard", Die.D6, [WeaponCategory.SimpleMelee]);
+        [WeaponProficiency.Simple, WeaponProficiency.Martial]);
+    public static readonly Class Mage = new("Mage", Die.D6, [WeaponProficiency.Simple]);
+    public static readonly Class Thief = new("Thief", Die.D8, [WeaponProficiency.Simple]);
+    public static readonly Class Wizard = new("Wizard", Die.D6, [WeaponProficiency.Simple]);
 
-    private readonly IReadOnlySet<WeaponCategory> _weaponProficiencies;
+    private readonly IReadOnlySet<WeaponProficiency> _weaponProficiencies;
 
-    private Class(string name, Die hitDie, IEnumerable<WeaponCategory> weaponProficiencies)
+    private Class(string name, Die hitDie, IEnumerable<WeaponProficiency> weaponProficiencies)
         : base(name)
     {
         HitDie = hitDie;
@@ -27,6 +26,6 @@ public sealed class Class : Enumeration<Class, string>
 
     public string Name => Value;
     public Die HitDie { get; }
-    public IReadOnlySet<WeaponCategory> WeaponProficiencies => _weaponProficiencies;
-    public bool CanUse(Weapon weapon) => weapon == Weapon.Hands || _weaponProficiencies.Contains(weapon.Category);
+    public IReadOnlySet<WeaponProficiency> WeaponProficiencies => _weaponProficiencies;
+    public bool CanUse(Weapon weapon) => weapon == Weapon.Hands || _weaponProficiencies.Contains(weapon.Proficiency);
 }

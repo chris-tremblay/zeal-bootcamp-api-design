@@ -2,7 +2,8 @@ using Zeal.Bootcamp.DnD.Domain.Core;
 
 namespace Zeal.Bootcamp.DnD.Domain.Characters;
 
-public sealed class BackgroundStory : ValueObject<BackgroundStory>
+public sealed class BackgroundStory 
+    : ValueObject<BackgroundStory>
 {
     public static readonly BackgroundStory Empty = new(string.Empty);
 

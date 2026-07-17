@@ -13,8 +13,12 @@ public sealed class CharacterName : ValueObject<CharacterName>
     }
 
     public string Value { get; }
+
     public static implicit operator string(CharacterName name) => name.Value;
+
     public override string ToString() => Value;
+
     protected override bool EqualsCore(CharacterName other) => Value == other.Value;
+
     protected override int GetHashCodeCore() => Value.GetHashCode(StringComparison.Ordinal);
 }

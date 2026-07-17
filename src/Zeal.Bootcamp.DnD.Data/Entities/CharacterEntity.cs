@@ -1,12 +1,20 @@
-﻿namespace Zeal.Bootcamp.DnD.Data.Entities;
+namespace Zeal.Bootcamp.DnD.Data.Entities;
 
-internal class CharacterEntity
+internal sealed class CharacterEntity
 {
-    public string Class { get; set; }
+    public string BackgroundStory { get; set; } = string.Empty;
 
     public Guid CharacterId { get; set; }
 
-    public string Name { get; set; }
+    public string Class { get; set; } = string.Empty;
 
-    public string Weapon { get; set; }
+    public InventoryItemEntity? EquippedWeaponItem { get; set; }
+
+    public Guid? EquippedWeaponItemId { get; set; }
+
+    public ExperienceTrackerEntity ExperienceTracker { get; set; } = null!;
+
+    public InventoryEntity Inventory { get; set; } = null!;
+
+    public string Name { get; set; } = string.Empty;
 }

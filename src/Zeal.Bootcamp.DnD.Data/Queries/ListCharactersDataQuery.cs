@@ -12,6 +12,6 @@ internal class ListCharactersDataQuery(DnDContext db) : IListCharactersDataQuery
         {
             ClassName = i.Class,
             Name = i.Name,
-            WeaponName = i.Weapon,
+            WeaponName = i.EquippedWeaponItem == null ? "Hands" : i.EquippedWeaponItem.Name,
         });
 }
